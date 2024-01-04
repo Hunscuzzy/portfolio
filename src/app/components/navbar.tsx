@@ -1,37 +1,62 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navItems = {
-  "/": {
-    name: "home",
+  "🏠": {
+    name: "Home",
   },
-  "/work": {
-    name: "work",
+  "👤": {
+    name: "About me",
+  },
+  "💼": {
+    name: "Works",
+  },
+  "💬": {
+    name: "Contact",
   },
 };
 
 export function Navbar() {
   return (
-    <aside className='-ml-[8px] mb-16 tracking-tight'>
-      <div className='lg:sticky lg:top-20'>
-        <nav
-          className='flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative'
-          id='nav'
-        >
-          <div className='flex flex-row space-x-0 pr-10'>
-            {Object.entries(navItems).map(([path, { name }]) => {
-              return (
-                <Link
-                  key={path}
-                  href={path}
-                  className='transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2'
-                >
-                  {name}
-                </Link>
-              );
-            })}
+    <div className='fixed top-0 left-0 w-full'>
+      <div className='top-0 container mx-auto py-2 flex justify-between items-center'>
+        <div className='group flex'>
+          <div>
+            <Image
+              src='/images/head.png'
+              alt='Hugo'
+              width={32}
+              height={32}
+              className='blur-sm group-hover:blur-none transition-all duration-250'
+            />
           </div>
+          <div>
+            <Image
+              src='/images/speach.png'
+              alt='Hugo Fontvieille'
+              width={32}
+              height={32}
+              className='group-hover:scale-100 scale-0 transition-all delay-250 duration-500'
+            />
+          </div>
+        </div>
+        <nav className='flex gap-x-2 flex-row'>
+          {Object.entries(navItems).map(([path, { name }]) => {
+            return (
+              <Link
+                key={path}
+                href={`#${path}`}
+                className='group transition hover:text-neutral-400 relative py-1 px-2'
+              >
+                <span className='inline-block mr-2 grayscale group-hover:animate-wiggle'>
+                  {path}
+                </span>
+                {name}
+              </Link>
+            );
+          })}
         </nav>
       </div>
-    </aside>
+    </div>
   );
 }

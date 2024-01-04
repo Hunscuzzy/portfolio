@@ -25,3 +25,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.section-title {
+  @apply text-6xl font-bold mb-4;
+}
