@@ -72,7 +72,14 @@ export function Hero() {
             </div>
           </div>
         </div>
-        <button className='absolute bottom-4 text-4xl animate-bounce hover:text-blue-700 transition'>
+        <button
+          className='absolute bottom-4 text-4xl animate-bounce hover:text-blue-700 transition'
+          onClick={() => {
+            document?.querySelector("#👤")?.scrollIntoView({
+              behavior: "smooth",
+            });
+          }}
+        >
           <IoArrowDown />
         </button>
       </div>
