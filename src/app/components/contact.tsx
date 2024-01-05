@@ -36,8 +36,8 @@ export default function Contact() {
       <div className='mx-auto max-w-2xl text-center'>
         <h2 className='section-title'>wanna reach me?</h2>
         <p className='mt-2 text-lg'>
-          Got a project in mind? <br /> Let's make it happen! Drop me a line
-          below.
+          Got a project in mind? <br /> Let&apos;s make it happen! Drop me a
+          line below.
         </p>
       </div>
       <form onSubmit={handleSubmit} className='mx-auto mt-16 max-w-xl sm:mt-20'>
