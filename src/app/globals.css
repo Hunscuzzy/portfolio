@@ -17,13 +17,13 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply text-indigo-950;
+  @apply bg-indigo-50;
+}
+
+body.dark {
+  @apply text-indigo-100;
+  @apply bg-indigo-950;
 }
 
 .section-title {

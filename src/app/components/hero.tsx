@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <section
       id='🏠'
-      className='group bg-gradient-to-tr from-black to-gray-900 min-h-screen flex items-center'
+      className='group bg-gradient-to-tr dark:from-black dark:to-gray-900 from-indigo-100 to-blue-200  min-h-screen flex items-center'
       onMouseMove={({ clientX: x, clientY: y }) =>
         set({ xy: [x - window.innerWidth / 2, y - window.innerHeight / 2] })
       }
@@ -29,10 +29,10 @@ export function Hero() {
             alt='Hugo Fontvieille'
             width={250}
             height={600}
-            className='z-0 blur-sm group-hover:blur-none transition-all delay-250 duration-500'
+            className='z-0 blur-sm brightness-200 filter group-hover:blur-none transition-all delay-250 duration-500'
           />
         </animated.div>
-        <div className='mt-32 shadow-2xl absolute flex items-center gap-8 flex-row-reverse'>
+        <div className='mt-32 absolute flex items-center gap-8 flex-row-reverse'>
           <animated.div
             style={{
               transform: props.xy.to(

@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import DarkModeSwitch from "./darkModeSwitch";
 
 const navItems = {
   "🏠": {
@@ -27,7 +29,7 @@ export function Navbar() {
               alt='Hugo'
               width={32}
               height={32}
-              className='blur-sm group-hover:blur-none transition-all duration-250'
+              className='md:blur-sm group-hover:blur-none transition-all duration-250'
             />
           </div>
           <div>
@@ -36,11 +38,11 @@ export function Navbar() {
               alt='Hugo Fontvieille'
               width={32}
               height={32}
-              className='group-hover:scale-100 scale-0 transition-all delay-250 duration-500'
+              className='group-hover:scale-100 md:scale-0 transition-all delay-250 duration-500'
             />
           </div>
         </div>
-        <nav className='flex gap-x-2 flex-row'>
+        <nav className='ml-auto flex gap-x-2 flex-row items-center'>
           {Object.entries(navItems).map(([path, { name }]) => {
             return (
               <Link
@@ -56,6 +58,7 @@ export function Navbar() {
             );
           })}
         </nav>
+        <DarkModeSwitch />
       </div>
     </div>
   );

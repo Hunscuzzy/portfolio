@@ -4,6 +4,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { Navbar } from "./components/navbar";
+import { Providers } from "./providers";
+import Body from "./components/body";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,10 +15,10 @@ export const metadata: Metadata = {
     default: "Hugo Fontvieille",
     template: "%s | Hugo Fontvieille",
   },
-  description: "Developer, entrepreneur, father and husband.",
+  description: "Developer, entrepreneur.",
   openGraph: {
     title: "Hugo Fontvieille",
-    description: "Developer, entrepreneur, father and husband.",
+    description: "Developer, entrepreneur.",
     url: "https://hugo-fontvieille.com",
     locale: "en_US",
     type: "website",
@@ -36,10 +38,6 @@ export const metadata: Metadata = {
     title: "Hugo Fontvieille",
     card: "summary_large_image",
   },
-  verification: {
-    google: "eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw",
-    yandex: "14d2e73487fa6c71",
-  },
 };
 
 export default function RootLayout({
@@ -48,13 +46,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
-      <body className={inter.className}>
-        <Navbar />
-        <main>{children}</main>
-        <SpeedInsights />
-        <Analytics />
-      </body>
+    <html className={inter.className} lang='en'>
+      <Providers>
+        <Body>
+          <Navbar />
+          {children}
+          <SpeedInsights />
+          <Analytics />
+        </Body>
+      </Providers>
     </html>
   );
 }
