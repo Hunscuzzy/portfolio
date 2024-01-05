@@ -1,6 +1,33 @@
 "use client";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Contact() {
+  const router = useRouter();
+  const [formData, setFormData] = useState({});
+
+  const handleSubmit = async (event) => {
+    console.log(formData);
+    event.preventDefault();
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      console.log("Message sent successfully");
+      router.push("/success");
+    } else {
+      console.error("Failed to send message");
+    }
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
   return (
     <section
       id='💬'
@@ -13,11 +40,7 @@ export default function Contact() {
           below.
         </p>
       </div>
-      <form
-        action='#'
-        method='POST'
-        className='mx-auto mt-16 max-w-xl sm:mt-20'
-      >
+      <form onSubmit={handleSubmit} className='mx-auto mt-16 max-w-xl sm:mt-20'>
         <div className='grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2'>
           <div>
             <label htmlFor='first-name' className='block text-sm font-semibold'>
@@ -25,6 +48,7 @@ export default function Contact() {
             </label>
             <div className='mt-2.5'>
               <input
+                onChange={handleChange}
                 type='text'
                 name='first-name'
                 id='first-name'
@@ -39,6 +63,7 @@ export default function Contact() {
             </label>
             <div className='mt-2.5'>
               <input
+                onChange={handleChange}
                 type='text'
                 name='last-name'
                 id='last-name'
@@ -53,6 +78,7 @@ export default function Contact() {
             </label>
             <div className='mt-2.5'>
               <input
+                onChange={handleChange}
                 type='text'
                 name='company'
                 id='company'
@@ -67,6 +93,7 @@ export default function Contact() {
             </label>
             <div className='mt-2.5'>
               <input
+                onChange={handleChange}
                 type='email'
                 name='email'
                 id='email'
@@ -84,6 +111,7 @@ export default function Contact() {
             </label>
             <div className='relative mt-2.5'>
               <input
+                onChange={handleChange}
                 type='tel'
                 name='phone-number'
                 id='phone-number'
@@ -98,6 +126,7 @@ export default function Contact() {
             </label>
             <div className='mt-2.5'>
               <textarea
+                onChange={handleChange}
                 name='message'
                 id='message'
                 rows={4}
