@@ -6,7 +6,7 @@ export default function Contact() {
   const router = useRouter();
   const [formData, setFormData] = useState({});
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: any) => {
     console.log(formData);
     event.preventDefault();
     const response = await fetch("/api/contact", {
