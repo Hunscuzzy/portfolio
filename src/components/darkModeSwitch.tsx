@@ -1,7 +1,7 @@
 "use client";
 import { useTransition, animated } from "react-spring";
 import { IoSunny, IoMoon } from "react-icons/io5";
-import { useDarkMode } from "../contexts/darkModeContext";
+import { useDarkMode } from "../app/contexts/darkModeContext";
 
 export default function DarkModeSwitch() {
   const { darkMode, toggleDarkMode } = useDarkMode();
