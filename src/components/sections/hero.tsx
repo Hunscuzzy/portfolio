@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <section
       id='🏠'
-      className='group bg-gradient-to-tr dark:from-black dark:to-gray-900 from-indigo-100 to-blue-200  min-h-screen flex items-center'
+      className='group bg-gradient-to-tr dark:from-black dark:to-gray-900 from-indigo-100 to-blue-200 min-h-screen flex items-center py-16'
       onMouseMove={({ clientX: x, clientY: y }) =>
         set({ xy: [x - window.innerWidth / 2, y - window.innerHeight / 2] })
       }

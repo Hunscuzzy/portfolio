@@ -19,7 +19,7 @@ export default function ContactForm() {
 
   return (
     <form
-      className='mx-auto mt-16 max-w-lg sm:mt-20 space-y-4'
+      className='relative mx-auto mt-16 max-w-lg sm:mt-20 space-y-4'
       onSubmit={handleSubmit(onSubmit)}
     >
       <div>

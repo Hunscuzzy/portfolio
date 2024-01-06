@@ -2,7 +2,7 @@ export function About() {
   return (
     <section
       id='👤'
-      className='group bg-gradient-to-tr dark:from-gray-950 dark:to-indigo-950 from-gray-50 to-indigo-300  min-h-screen flex items-center'
+      className='py-16 group bg-gradient-to-tr dark:from-gray-950 dark:to-indigo-950 from-gray-50 to-indigo-300  min-h-screen flex items-center'
     >
       <div className='container mx-auto'>
         <h2 className='section-title'>about me</h2>
