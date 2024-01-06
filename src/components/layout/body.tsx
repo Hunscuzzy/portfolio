@@ -1,6 +1,6 @@
 "use client";
 import React, { ReactNode } from "react";
-import { useDarkMode } from "../contexts/darkModeContext";
+import { useDarkMode } from "../../contexts/darkModeContext";
 
 export default function Body({
   children,

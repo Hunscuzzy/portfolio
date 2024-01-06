@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import DarkModeSwitch from "./darkModeSwitch";
+import DarkModeSwitch from "../darkModeSwitch";
 
 const navItems = {
   "🏠": {
