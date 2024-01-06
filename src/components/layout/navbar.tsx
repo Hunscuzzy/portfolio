@@ -20,7 +20,7 @@ const navItems = {
 
 export function Navbar() {
   return (
-    <div className='z-50 fixed top-0 left-0 w-full'>
+    <div className='z-50 fixed top-0 left-0 w-full bg-gradient-to-b dark:from-gray-900 dark:to-transparent from-indigo-200 to-transparent'>
       <div className='top-0 container mx-auto py-2 flex justify-between items-center'>
         <div className='group flex'>
           <div>
