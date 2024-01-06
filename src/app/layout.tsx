@@ -6,6 +6,7 @@ import "./globals.css";
 import { Navbar } from "../components/layout/navbar";
 import { Providers } from "./providers";
 import Body from "../components/layout/body";
+import Footer from "@/components/layout/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,6 +54,7 @@ export default function RootLayout({
           {children}
           <SpeedInsights />
           <Analytics />
+          <Footer />
         </Body>
       </Providers>
     </html>
