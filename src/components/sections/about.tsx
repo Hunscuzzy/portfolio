@@ -2,12 +2,12 @@ export function About() {
   return (
     <section
       id='👤'
-      className='py-16 group bg-gradient-to-tr dark:from-gray-950 dark:to-indigo-950 from-gray-50 to-indigo-300  min-h-screen flex items-center'
+      className='group bg-gradient-to-tr dark:from-gray-950 dark:to-indigo-950 from-gray-50 to-indigo-300  min-h-screen flex items-center py-16 px-4'
     >
       <div className='container mx-auto'>
         <h2 className='section-title'>about me</h2>
         <p className='-mt-2 mb-2 text-2xl'>🇫🇷 🇪🇸 🇬🇧</p>
-        <div className='flex space-x-16 justify-center'>
+        <div className='flex flex-col sm:flex-row sm:space-x-16 justify-center'>
           <p className='flex-1 max-w-md'>
             Driven by a passion for entrepreneurship since the age of 17, I am a
             28-year-old husband and father, based in Spain. My career,

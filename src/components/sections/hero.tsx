@@ -11,7 +11,7 @@ export function Hero() {
   return (
     <section
       id='🏠'
-      className='group bg-gradient-to-tr dark:from-black dark:to-gray-900 from-indigo-100 to-blue-200 min-h-screen flex items-center py-16'
+      className='group bg-gradient-to-tr dark:from-black dark:to-gray-900 from-indigo-100 to-blue-200 min-h-screen flex items-center py-16 px-4'
       onMouseMove={({ clientX: x, clientY: y }) =>
         set({ xy: [x - window.innerWidth / 2, y - window.innerHeight / 2] })
       }
@@ -32,7 +32,7 @@ export function Hero() {
             className='z-0 blur-sm brightness-200 filter group-hover:blur-none transition-all delay-250 duration-500'
           />
         </animated.div>
-        <div className='mt-32 absolute flex items-center gap-8 flex-row-reverse'>
+        <div className='mt-32 absolute flex items-center gap-8 flex-col md:flex-row-reverse'>
           <animated.div
             style={{
               transform: props.xy.to(
@@ -46,7 +46,7 @@ export function Hero() {
             </h1>
             <i className='font-normal text-md'>/fɔ̃.vjɛj/</i>
           </animated.div>
-          <div className='text-right text-xl leading-normal'>
+          <div className='text-center md:text-right text-xl leading-normal'>
             <h2>
               French <i>Entrepreneur</i>, <br /> Working as <i>Front-end dev</i>{" "}
               , <br /> Living in <i>Alicante</i>, Spain.

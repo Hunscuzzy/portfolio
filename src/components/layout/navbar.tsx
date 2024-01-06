@@ -53,7 +53,7 @@ export function Navbar() {
                 <span className='inline-block mr-2 grayscale group-hover:animate-wiggle'>
                   {path}
                 </span>
-                {name}
+                <span className='hidden md:inline-block'>{name}</span>
               </Link>
             );
           })}

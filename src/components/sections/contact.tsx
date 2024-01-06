@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <section
       id='💬'
-      className='bg-gradient-to-t dark:from-gray-900 dark:to-blue-950 from-indigo-200 to-blue-100 min-h-screen flex justify-center items-center overflow-hidden py-16'
+      className='bg-gradient-to-t dark:from-gray-900 dark:to-blue-950 from-indigo-200 to-blue-100 min-h-screen flex justify-center items-center overflow-hidden py-16 px-4'
     >
       <div>
         <animated.div
