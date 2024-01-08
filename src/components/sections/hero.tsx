@@ -3,7 +3,7 @@ import Image from "next/image";
 import { IoArrowDown, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import { useSpring, animated } from "react-spring";
 
-export function Hero() {
+export default function Hero() {
   const [props, set] = useSpring(() => ({
     xy: [0, 0],
     config: { mass: 10, tension: 550, friction: 140 },
