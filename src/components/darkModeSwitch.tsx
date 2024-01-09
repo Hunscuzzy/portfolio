@@ -1,6 +1,6 @@
 "use client";
 import { useTransition, animated } from "react-spring";
-import { IoSunny, IoMoon } from "react-icons/io5";
+import { IoMoon, IoSunnyOutline } from "react-icons/io5";
 import { useDarkMode } from "../contexts/darkModeContext";
 
 export default function DarkModeSwitch() {
@@ -18,7 +18,7 @@ export default function DarkModeSwitch() {
       {transitions((style, item) =>
         item ? (
           <animated.div className='absolute' style={style}>
-            <IoSunny />
+            <IoSunnyOutline />
           </animated.div>
         ) : (
           <animated.div className='absolute' style={style}>

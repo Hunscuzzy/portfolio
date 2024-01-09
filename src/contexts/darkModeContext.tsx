@@ -27,6 +27,7 @@ type DarkModeProviderProps = {
 export function DarkModeProvider({ children }: DarkModeProviderProps) {
   const [darkMode, setDarkMode] = useState<boolean>(() => {
     if (typeof window !== "undefined") {
+      console.log("OK");
       return localStorage.getItem("darkMode") === "true";
     }
     return false;
