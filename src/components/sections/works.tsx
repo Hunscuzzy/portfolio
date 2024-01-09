@@ -1,42 +1,58 @@
+"use client";
+import works from "@/data/works.json";
+import { Disclosure, Transition } from "@headlessui/react";
+import { IoCodeSlash } from "react-icons/io5";
+
 export default function Works() {
   return (
     <section
       id='💼'
-      className='bg-gradient-to-l dark:from-gray-950 dark:to-indigo-950 from-gray-50 to-indigo-300  min-h-screen flex items-center py-16 px-4'
+      className='relative bg-gradient-to-l dark:from-gray-950 dark:to-indigo-950 from-gray-50 to-indigo-300  min-h-screen flex items-center py-16 px-4'
     >
+      <div className='bg-carbon opacity-20 absolute w-full h-full left-0 top-0' />
+
       <div className='relative container mx-auto flex flex-col md:flex-row-reverse justify-between gap-16'>
-        <h2 className='section-title text-right'>
-          what <br /> I <br /> did
+        <h2 className='section-title md:text-right md:sticky top-8 h-fit'>
+          what <br className='hidden sm:block' /> I{" "}
+          <br className='hidden sm:block' /> did
         </h2>
         <div>
-          <ol className='relative border-s border-gray-200 dark:border-gray-700'>
-            <li className='mb-10 ms-6'>
-              <span className='absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900'>
-                <svg
-                  className='w-2.5 h-2.5 text-blue-800 dark:text-blue-300'
-                  aria-hidden='true'
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                >
-                  <path d='M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z' />
-                </svg>
-              </span>
-              <h3 className='flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white'>
-                Project title
-              </h3>
-              <time className='block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500'>
-                Dates
-              </time>
-              <p className='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
-                Description project Description project Description project
-                Description project Description project Description project
-                Description project Description project Description project
-                Description project Description project Description project
-                Description project Description project Description project
-              </p>
-            </li>
-          </ol>
+          <div className='relative border-s border-gray-200 dark:border-gray-700 space-y-4'>
+            {works.map((work) => (
+              <Disclosure key={work.title}>
+                {() => (
+                  <>
+                    <Disclosure.Button className='ml-8 text-left w-full'>
+                      <span className='absolute flex items-center justify-center w-6 h-6 bg-white rounded-full -start-3 ring-7 ring-white dark:ring-blue-900 dark:bg-blue-900'>
+                        <IoCodeSlash className='w-4 h-4 text-blue-800 dark:text-blue-300' />
+                      </span>
+                      <h3 className='flex items-center mb-1 text-lg font-semibold text-blue-950 dark:text-white'>
+                        {work.title}
+                      </h3>
+                      <time className='block mb-2 text-sm font-normal leading-none text-blue-800 dark:text-gray-500'>
+                        {work.date}
+                      </time>
+                    </Disclosure.Button>
+                    <Transition
+                      className='transition transform origin-left'
+                      enter='duration-200 ease-out'
+                      enterFrom='scale-90 opacity-0'
+                      enterTo='scale-100 opacity-100'
+                      leave='duration-100 ease-out'
+                      leaveFrom='scale-100 opacity-100'
+                      leaveTo='scale-90 opacity-0'
+                    >
+                      <Disclosure.Panel className='ml-8'>
+                        <p className='mb-4 text-base font-normal text-gray-800 dark:text-gray-400'>
+                          {work.content}
+                        </p>
+                      </Disclosure.Panel>
+                    </Transition>
+                  </>
+                )}
+              </Disclosure>
+            ))}
+          </div>
         </div>
       </div>
     </section>
