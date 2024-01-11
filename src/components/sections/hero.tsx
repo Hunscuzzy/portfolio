@@ -32,7 +32,7 @@ export default function Hero() {
             className='z-0 blur-sm brightness-200 filter group-hover:blur-none transition-all delay-250 duration-500'
           />
         </animated.div>
-        <div className='mt-32 absolute flex items-center gap-8 flex-col md:flex-row-reverse'>
+        <div className='mt-32 absolute flex items-center gap-8 flex-col md:flex-row-reverse drop-shadow'>
           <animated.div
             style={{
               transform: props.xy.to(
@@ -48,8 +48,9 @@ export default function Hero() {
           </animated.div>
           <div className='text-center md:text-right text-xl leading-normal'>
             <h2>
-              French <i>Entrepreneur</i>, <br /> Working as <i>Front-end dev</i>{" "}
-              , <br /> Living in <i>Alicante</i>, Spain.
+              French <i>Freelance & Entrepreneur</i>, <br /> Working as{" "}
+              <i>Front-end developer</i> , <br /> Living in <i>Alicante</i>,
+              Spain.
             </h2>
             <a className='underline italic text-sm mt-2 block' href='/#👤'>
               Know more
