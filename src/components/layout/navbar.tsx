@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import DarkModeSwitch from "../darkModeSwitch";
+import { useEffect, useState } from "react";
+import clsx from "clsx";
 
 const navItems = {
   "🏠": {
@@ -19,6 +20,27 @@ const navItems = {
 };
 
 export function Navbar() {
+  const [activeSection, setActiveSection] = useState<string>("🏠");
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      const topViewport = window.scrollY;
+      const midViewport = topViewport + window.innerHeight / 2;
+
+      sections.forEach((section) => {
+        const topSection = section.offsetTop;
+        const bottomSection = topSection + section.offsetHeight;
+
+        if (topSection <= midViewport && bottomSection >= midViewport) {
+          setActiveSection(section.id);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <div className='z-50 fixed top-0 left-0 w-full bg-gradient-to-b dark:from-gray-900 dark:to-transparent from-indigo-200 to-transparent'>
       <div className='top-0 container mx-auto py-2 flex justify-between items-center'>
@@ -45,16 +67,25 @@ export function Navbar() {
         <nav className='ml-auto flex gap-x-2 flex-row items-center'>
           {Object.entries(navItems).map(([path, { name }]) => {
             return (
-              <Link
+              <button
                 key={path}
-                href={`#${path}`}
+                onClick={() => {
+                  document?.querySelector(`#${path}`)?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
                 className='group transition hover:text-neutral-400 relative py-1 px-2'
               >
-                <span className='inline-block mr-2 grayscale group-hover:animate-wiggle'>
+                <span
+                  className={clsx(
+                    activeSection === path ? "" : "grayscale",
+                    "inline-block mr-2 group-hover:animate-wiggle"
+                  )}
+                >
                   {path}
                 </span>
                 <span className='hidden md:inline-block'>{name}</span>
-              </Link>
+              </button>
             );
           })}
         </nav>
