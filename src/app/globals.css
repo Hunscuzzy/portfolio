@@ -19,6 +19,7 @@
 body {
   @apply text-indigo-950;
   @apply bg-indigo-50;
+  font-family: "Nunito", sans-serif;
 }
 
 body.dark {

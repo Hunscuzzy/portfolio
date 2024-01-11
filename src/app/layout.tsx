@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
-import "./globals.css";
-import { Navbar } from "../components/layout/navbar";
-import { Providers } from "./providers";
-import Body from "../components/layout/body";
+import { Navbar } from "@/components/layout/navbar";
+import Body from "@/components/layout/body";
 import Footer from "@/components/layout/footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Providers } from "./providers";
+import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hugo-fontvieille.com"),
@@ -47,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className={inter.className} lang='en'>
+    <html lang='en'>
       <Providers>
         <Body>
           <Navbar />

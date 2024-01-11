@@ -8,6 +8,9 @@ const config: Config = {
   ],
   darkMode: "class",
   theme: {
+    fontFamily: {
+      sans: ["Nunito", "system-ui"],
+    },
     extend: {
       keyframes: {
         wiggle: {
