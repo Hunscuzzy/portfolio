@@ -12,7 +12,7 @@ type DarkModeContextType = {
 };
 
 const DarkModeContext = createContext<DarkModeContextType>({
-  darkMode: false,
+  darkMode: true,
   toggleDarkMode: () => {},
 });
 
@@ -25,17 +25,22 @@ type DarkModeProviderProps = {
 };
 
 export function DarkModeProvider({ children }: DarkModeProviderProps) {
-  const [darkMode, setDarkMode] = useState<boolean>(() => {
-    if (typeof window !== "undefined") {
-      console.log("OK");
-      return localStorage.getItem("darkMode") === "true";
-    }
-    return false;
-  });
+  const [darkMode, setDarkMode] = useState<boolean>(true);
+  const [isMounted, setIsMounted] = useState<boolean>(false);
 
   useEffect(() => {
-    localStorage.setItem("darkMode", String(darkMode));
-  }, [darkMode]);
+    setIsMounted(true);
+    if (typeof window !== "undefined") {
+      const storedDarkMode = localStorage.getItem("darkMode") === "true";
+      setDarkMode(storedDarkMode);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isMounted) {
+      localStorage.setItem("darkMode", String(darkMode));
+    }
+  }, [darkMode, isMounted]);
 
   const toggleDarkMode = () => setDarkMode(!darkMode);
 
