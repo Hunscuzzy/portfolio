@@ -1,7 +1,7 @@
 "use client";
 import works from "@/data/works.json";
 import { Disclosure, Transition } from "@headlessui/react";
-import { IoCodeSlash } from "react-icons/io5";
+import { IoAdd, IoCodeSlash, IoRemove } from "react-icons/io5";
 
 export default function Works() {
   return (
@@ -20,16 +20,20 @@ export default function Works() {
           <div className='relative border-s border-gray-200 dark:border-gray-700 space-y-4'>
             {works.map((work) => (
               <Disclosure key={work.title}>
-                {() => (
+                {({ open }) => (
                   <>
                     <Disclosure.Button className='ml-8 text-left w-full'>
                       <span className='absolute flex items-center justify-center w-6 h-6 bg-white rounded-full -start-3 ring-7 ring-white dark:ring-blue-900 dark:bg-blue-900'>
-                        <IoCodeSlash className='w-4 h-4 text-blue-800 dark:text-blue-300' />
+                        {open ? (
+                          <IoRemove className='w-4 h-4 text-blue-800 dark:text-blue-300' />
+                        ) : (
+                          <IoAdd className='w-4 h-4 text-blue-800 dark:text-blue-300' />
+                        )}
                       </span>
-                      <h3 className='flex items-center mb-1 text-lg font-semibold text-blue-950 dark:text-white'>
+                      <h3 className='flex items-center mb-2 text-xl font-medium text-blue-950 dark:text-white'>
                         {work.title}
                       </h3>
-                      <time className='block mb-2 text-sm font-normal leading-none text-blue-800 dark:text-gray-500'>
+                      <time className='block mb-2 text-sm font-normal leading-none text-blue-800 dark:text-blue-300'>
                         {work.date}
                       </time>
                     </Disclosure.Button>
@@ -43,7 +47,7 @@ export default function Works() {
                       leaveTo='scale-90 opacity-0'
                     >
                       <Disclosure.Panel className='ml-8'>
-                        <p className='mb-4 text-base font-normal text-gray-800 dark:text-gray-400'>
+                        <p className='mb-4 text-base font-normal text-gray-800 dark:text-gray-200'>
                           {work.content}
                         </p>
                       </Disclosure.Panel>

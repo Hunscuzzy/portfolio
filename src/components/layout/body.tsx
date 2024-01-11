@@ -4,7 +4,7 @@ import { Kanit } from "next/font/google";
 import clsx from "clsx";
 import { useDarkMode } from "@/contexts/darkModeContext";
 
-const nunito = Kanit({ subsets: ["latin"], weight: ["300", "700"] });
+const nunito = Kanit({ subsets: ["latin"], weight: ["300", "400", "700"] });
 
 export default function Body({
   children,
