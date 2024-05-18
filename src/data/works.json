@@ -1,51 +1,56 @@
 [
   {
-    "title": "Front-end developer, Purse (ex. UpStreamPay), Lille, France",
-    "date": "AUGUST 2021 — PRESENT",
+    "title": "Front-end developer, Tipii', Lille, France - Full Remote",
+    "date": "APRIL 2024 — MAY 2024",
+    "content": "During my tenure at Tipii', I led the comprehensive overhaul of the e-commerce platform, transitioning from Vue.js to Next.js to harness the benefits of server-side rendering, which enhanced SEO and performance. My approach involved the strategic use of Typescript for type safety and TailwindCSS for a more streamlined, utility-first styling methodology. On the backend, I employed Node.js to improve server-side capabilities, integrating Stripe to facilitate seamless payment transactions. This role was pivotal in elevating the site's user experience and performance metrics, culminating in a perfect score of 100% on Page Speed Insights. This achievement not only underscored my dedication to front-end excellence but also highlighted my ability to significantly enhance website quality and user satisfaction."
+  },
+  {
+    "title": "Front-end developer, Purse (ex. UpStreamPay), Lille, France - Full Remote",
+    "date": "AUGUST 2021 — APRIL 2024",
     "content": "As an experienced front-end developer, I made significant contributions at Purse (formerly Upstream Pay), working in an agile environment. I specialized in technologies like React, Next, Gatsby, Svelte, Redux, Material UI, Tailwind, Cypress, etc. My major accomplishments include; designing an advanced back-office to optimize client/support interactions, creating a component library in a monorepo, documented via StoryBook, to boost development and harmonize UI/UX, developing a Gatsby-based showcase site focused on SEO and performance, implementing a demo site with Next.js, developing technical documentation with Docusaurus. I also enriched my experience by participating in recruitment interviews, contributing to the team's growth."
   },
   {
-    "title": "Front-end developer, CNRS, Paris, France",
+    "title": "Front-end developer, CNRS, Paris, France - Full Remote",
     "date": "DECEMBER 2020 — APRIL 2021",
     "content": "I led a web project from start to finish, from conception to production. This project included creating interactive mockups and developing an integrated solution in both back-end and front-end, providing a rich experience. My responsibilities included negotiating and managing compromises with a demanding client while maintaining high code quality. As the site architect, I chose WordPress for its editorial efficiency and Gatsby to optimize the developer experience. I designed a library of aesthetic components for an intuitive and attractive user interface. This role honed my skills in independent project management and in developing customized solutions."
   },
   {
-    "title": "Front-end developer, YouTrace, Clichy, France",
+    "title": "Front-end developer, YouTrace, Clichy, France - Full Remote",
     "date": "JANUARY 2020 — AUGUST 2021",
     "content": "YouTrace is a platform connecting artists with music video producers. Working autonomously with just one other developer and the project initiator, I co-designed the UI/UX of an international web application for musical artists, in partnership with a design agency. This project resulted in an elegant and functional user interface. My responsibilities included; UI/UX design in close collaboration with the design agency, front-end development in React focused on performance and modularity, and contributing to the Java back-end, ensuring a robust and secure infrastructure. This role allowed me to strengthen my skills in independent work, interdisciplinary collaboration, and creating custom solutions for an international audience."
   },
   {
-    "title": "Front-end developer, TRACE, Clichy, France",
+    "title": "Front-end developer, TRACE, Clichy, France - Full Remote",
     "date": "NOVEMBER 2020 — FEBRUARY 2021",
     "content": "Development of a multilingual showcase website using WordPress as a Headless CMS, Gatsby as the front-end, and Firebase as the database."
   },
   {
-    "title": "Front-end developer, UpMyDev, Alicante, Spain",
+    "title": "Front-end developer, UpMyDev, Alicante, Spain - Full Remote",
     "date": "DECEMBER 2019 — FEBRUARY 2020",
     "content": "I led the design and development of a high-performance, modern showcase website, starting with graphical design using modern tools for an intuitive and visual UX. In development, I chose React JS, starting with Create React App (CRA). I integrated TypeScript for static typing, thereby increasing the maintainability and robustness of the code. I used Styled-components for styling, allowing the creation of reusable components with encapsulated styles, ensuring visual consistency across the site. My main contributions are; Graphical design focused on UX and aesthetics. Front-end development in React JS, strengthened by TypeScript for more robust code. Utilization of Styled-components for modular and efficient style management. Application of best practices for a high-performance and easily maintainable site."
   },
   {
-    "title": "Front-end developer, BNP Paribas, Paris, France",
+    "title": "Front-end developer, BNP Paribas, Paris, France - Full Remote",
     "date": "DECEMBER 2019 — JANUARY 2020",
     "content": "I led the development of a front-end Proof of Concept (POC) for an AI project in React, starting with a prototype to validate the UX and essential functionalities, thereby illuminating the project's needs and planning. My main contributions included; Designing a prototype to refine the UX and key functionalities. Developing in React JS, implementing practices to ensure maintainable code. Integrating APIs with state management and side-effect techniques to dynamize data. This initiative highlighted my competence in React and API integration, within a structured development environment."
   },
   {
-    "title": "Entrepreneur, Bizou",
+    "title": "Entrepreneur, Bizou - Full Remote",
     "date": "AUGUST 2019 — OCTOBER 2019",
     "content": "Bizou.io is a project of my own creation, aimed at simplifying website creation for artisan jewelers and jewelry makers. My goal was to balance accessibility and quality, using modern technologies like React JS, Gatsby, SnipCart, and Material UI. Key points of my work include; Designing and executing the project, addressing a specific market need. Using React JS and Gatsby for a high-performance and aesthetically pleasing site. Integrating SnipCart and Material UI for an optimal user experience. This project demonstrates my ability to develop innovative solutions tailored to the specific needs of an industry."
   },
   {
-    "title": "Front-end developer & UI/UX designer, Déménageons, Paris, France",
+    "title": "Front-end developer & UI/UX designer, Déménageons, Paris, France - Full Remote",
     "date": "FEBRUARY 2019 — AUGUST 2019",
     "content": "I led an online comparison project for movers, featuring a technical multi-step form. My responsibilities encompassed both front-end and back-end development, overall project management, and subcontracting the back-office development. Key points include; Leading the project, including planning and coordination. Developing front-end/back-end for a comprehensive and efficient solution. Effectively managing subcontracting for back-office development. This project highlights my skills in project management and full-stack web development."
   },
   {
-    "title": "Front-end developer & UI/UX designer, ASTORIA FINANCE, Paris, France",
+    "title": "Front-end developer & UI/UX designer, ASTORIA FINANCE, Paris, France - Full Remote",
     "date": "JUNE 2018 — JANUARY 2019",
     "content": "I led the design of low to high-fidelity mockups, followed by the development of a responsive website. My tasks included HTML/CSS integration and the creation of a custom WordPress theme, as well as site maintenance. Responsibilities involved designing wireframes and detailed mockups for project previsualization, developing a responsive site integrating HTML/CSS and a custom WordPress theme, and ongoing maintenance to ensure the site's performance and relevance. This project showcases my ability to manage the entire web development process, from initial design to ongoing maintenance."
   },
   {
-    "title": "Front-end developer, Les puces du design, Paris, France",
+    "title": "Front-end developer, Les puces du design, Paris, France - Full Remote",
     "date": "MARCH 2017 — JUNE 2018",
     "content": "I developed a responsive website, handling the HTML/CSS integration and creating a custom WordPress theme. I was also responsible for site maintenance to ensure its performance and security. This involved developing a responsive site with HTML/CSS/JS integration, creating a WordPress theme from scratch, and regular maintenance to optimize the site's performance and security."
   },
